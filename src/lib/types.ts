@@ -3,7 +3,7 @@ export interface ChallengeInfo {
 	title: string;
 	start: string;
 	end: string;
-	isStarted: boolean;
+	isComing: boolean;
 	isFinished: boolean;
 	thumbnail: string;
 }
@@ -24,7 +24,5 @@ export interface ChallengeRules {
 	title: string;
 	start: string;
 	end: string;
-	objectives: string;
-	ambitions: string;
-	constraints: string;
+	content: string;
 }

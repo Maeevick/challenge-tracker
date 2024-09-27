@@ -5,7 +5,7 @@
 		"noChallenges": "Aucun challenge trouvé.",
 		"active": "En cours",
 		"completed": "Terminé",
-		"futur": "À venir..."
+		"coming": "À venir..."
 	},
 	"challenge": {
 		"progress": "Progression",
@@ -20,9 +20,7 @@
 		"engagementRate": "Taux d'engagement :",
 		"acquisitionRate": "Taux d'acquisition :",
 		"rules": "Règles du Challenge",
-		"objectives": "Objectifs",
-		"ambitions": "Ambitions",
-		"constraints": "Contraintes",
+		"content": "Description",
 		"viewDetails": "Voir les détails des posts"
 	},
 	"details": {

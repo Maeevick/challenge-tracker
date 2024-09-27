@@ -1,4 +1,8 @@
 export function formatDate(dateString: string): string {
+	if (!dateString) {
+		return '';
+	}
+
 	return new Intl.DateTimeFormat('en', {
 		year: 'numeric',
 		month: 'short',

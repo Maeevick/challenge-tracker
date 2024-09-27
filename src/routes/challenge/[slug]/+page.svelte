@@ -1,5 +1,8 @@
 <script lang="ts">
 	import { _ } from 'svelte-i18n';
+
+	import { goto } from '$app/navigation';
+
 	import type { ChallengeRules, PostData } from '$lib/types';
 	import { formatDate, calculateDaysPassed } from '$lib/utils/date';
 	import {
@@ -12,6 +15,15 @@
 		rules: ChallengeRules;
 		posts: PostData[];
 	};
+
+	function navigateToDetails() {
+		goto(`/details/${data.rules.slug}`, {
+			state: {
+				posts: data.posts,
+				challengeTitle: data.rules.title
+			}
+		});
+	}
 
 	$: totalStats = calculateTotalStats(data.posts);
 	$: totalDays = calculateDaysPassed(data.rules.start, data.rules.end);
@@ -52,20 +64,14 @@
 	<p class="mb-2">
 		{formatDate(data.rules.start)} - {formatDate(data.rules.end)}
 	</p>
-	<h3 class="mb-2 mt-4 text-xl font-semibold">{$_('challenge.objectives')}</h3>
-
 	<!-- eslint-disable svelte/no-at-html-tags -->
-	{@html data.rules.objectives}
-	<h3 class="mb-2 mt-4 text-xl font-semibold">{$_('challenge.ambitions')}</h3>
-	{@html data.rules.ambitions}
-	<h3 class="mb-2 mt-4 text-xl font-semibold">{$_('challenge.constraints')}</h3>
-	{@html data.rules.constraints}
+	{@html data.rules.content}
 	<!-- eslint-enable svelte/no-at-html-tags -->
 </div>
 
-<a
-	href="/details/{data.rules.slug}"
+<button
+	on:click={navigateToDetails}
 	class="mt-8 inline-block rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-600"
 >
 	{$_('challenge.viewDetails')}
-</a>
+</button>
