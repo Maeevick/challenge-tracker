@@ -2,6 +2,7 @@
 	import { _ } from 'svelte-i18n';
 	import type { ChallengeInfo } from '$lib/types';
 	import { formatDate } from '$lib/utils/date';
+	import placeholder from '$lib/images/challenge.jpg';
 
 	export let challenge: ChallengeInfo;
 </script>
@@ -10,7 +11,11 @@
 	<div
 		class="overflow-hidden rounded-lg bg-white shadow-md transition-transform hover:scale-105 dark:bg-gray-800"
 	>
-		<img src={challenge.thumbnail} alt={challenge.title} class="m-4 h-48 w-full object-cover" />
+		<img
+			src={challenge.thumbnail || placeholder}
+			alt={challenge.title}
+			class="m-4 h-48 w-full object-cover"
+		/>
 		<div class="p-4">
 			<h2 class="mb-2 text-xl font-semibold">{challenge.title}</h2>
 			<p class="text-sm text-gray-600 dark:text-gray-400">

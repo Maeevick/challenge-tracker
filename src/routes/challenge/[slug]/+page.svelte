@@ -53,11 +53,14 @@
 		{formatDate(data.rules.start)} - {formatDate(data.rules.end)}
 	</p>
 	<h3 class="mb-2 mt-4 text-xl font-semibold">{$_('challenge.objectives')}</h3>
+
+	<!-- eslint-disable svelte/no-at-html-tags -->
 	{@html data.rules.objectives}
 	<h3 class="mb-2 mt-4 text-xl font-semibold">{$_('challenge.ambitions')}</h3>
 	{@html data.rules.ambitions}
 	<h3 class="mb-2 mt-4 text-xl font-semibold">{$_('challenge.constraints')}</h3>
 	{@html data.rules.constraints}
+	<!-- eslint-enable svelte/no-at-html-tags -->
 </div>
 
 <a

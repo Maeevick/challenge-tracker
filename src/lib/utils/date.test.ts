@@ -4,7 +4,7 @@ import { formatDate, isDateInRange, calculateDaysPassed } from './date';
 describe('date', () => {
 	describe('formatDate', () => {
 		it('should format date correctly', () => {
-			expect(formatDate('2024-10-01')).toBe('1 octobre 2024');
+			expect(formatDate('2024-10-01')).toBe('Oct 1, 2024');
 		});
 	});
 

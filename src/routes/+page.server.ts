@@ -25,7 +25,7 @@ export const load: PageLoad = async ({ params }) => {
 						end: end ?? '',
 						isStarted: new Date() >= new Date(start ?? ''),
 						isFinished: new Date() >= new Date(end ?? ''),
-						thumbnail: 'src/lib/images/challenge.jpg'
+						thumbnail: ''
 					};
 				})
 		);
