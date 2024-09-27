@@ -3,8 +3,9 @@ import type { PageServerLoad } from './$types';
 
 import { getContentData } from '$lib/builder/store';
 
-export const load: PageServerLoad = async ({ params, parent }) => {
-	await parent();
+export { entries } from '$lib/builder/entries';
+
+export const load: PageServerLoad = async ({ params }) => {
 	const challengeData = getContentData(params.slug);
 	if (!challengeData) {
 		throw error(404, 'Challenge not found');

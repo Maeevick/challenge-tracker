@@ -7,6 +7,8 @@ import type { PageServerLoad } from './$types';
 import { setContentData } from '$lib/builder/store';
 import { parseChallengeRules, parsePostData } from '$lib/utils/markdown';
 
+export const prerender = true;
+
 export const load: PageServerLoad = async () => {
 	try {
 		const challengesPath = path.join(process.cwd(), 'static', 'challenges');
