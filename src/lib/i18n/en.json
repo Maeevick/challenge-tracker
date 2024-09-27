@@ -1,0 +1,39 @@
+{
+	"app": {
+		"title": "Challenge Tracker",
+		"home": "Home",
+		"noChallenges": "No challenges found.",
+		"active": "Active",
+		"completed": "Completed",
+		"futur": "Coming..."
+	},
+	"challenge": {
+		"progress": "Progress",
+		"days": "days",
+		"totalStats": "Total Statistics",
+		"impressions": "Impressions:",
+		"reactions": "Reactions:",
+		"comments": "Comments:",
+		"shares": "Shares:",
+		"newFollowers": "New Followers:",
+		"averages": "Averages",
+		"engagementRate": "Engagement Rate:",
+		"acquisitionRate": "Acquisition Rate:",
+		"rules": "Challenge Rules",
+		"objectives": "Objectives",
+		"ambitions": "Ambitions",
+		"constraints": "Constraints",
+		"viewDetails": "View Post Details"
+	},
+	"details": {
+		"postDetails": "Post Details",
+		"date": "Date",
+		"impressions": "Impressions",
+		"reactions": "Reactions",
+		"comments": "Comments",
+		"shares": "Shares",
+		"newFollowers": "New Followers",
+		"engagementRate": "Engagement Rate",
+		"acquisitionRate": "Acquisition Rate"
+	}
+}

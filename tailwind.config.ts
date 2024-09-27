@@ -3,7 +3,7 @@ import typographyPlugin from '@tailwindcss/typography';
 
 export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
-
+	darkMode: 'class',
 	theme: {
 		extend: {}
 	},
