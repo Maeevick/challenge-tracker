@@ -1,22 +1,9 @@
 import { describe, it, expect } from 'vitest';
-import { parseMarkdown, parseChallengeRules, parsePostData } from './markdown';
+import { parseChallengeRules, parsePostData } from './markdown';
 
 describe('markdown utils', () => {
-	describe('parseMarkdown', () => {
-		it('should parse front matter and body correctly', () => {
-			const content = `---
-title: Test
-date: 2024-10-01
----
-This is the body`;
-			const result = parseMarkdown(content);
-			expect(result.frontMatter).toEqual({ title: 'Test', date: '2024-10-01' });
-			expect(result.body).toBe('This is the body');
-		});
-	});
-
 	describe('parseChallengeRules', () => {
-		it('should parse challenge rules correctly', async () => {
+		it('should parse challenge rules correctly with metadata and content', async () => {
 			const content = `---
 title: October Challenge
 start: 2024-10-01
@@ -38,14 +25,25 @@ end: 2024-10-31
 			expect(result.title).toBe('October Challenge');
 			expect(result.start).toBe('2024-10-01');
 			expect(result.end).toBe('2024-10-31');
-			expect(result.objectives).toContain('<li>Post daily</li>');
-			expect(result.ambitions).toContain('<li>Growth</li>');
-			expect(result.constraints).toContain('<li>Use LinkedIn only</li>');
+			expect(result.content).toContain(
+				`<h2>Objectives</h2>
+<ul>
+<li>Post daily</li>
+</ul>
+<h2>Abitions</h2>
+<ul>
+<li>Growth</li>
+</ul>
+<h2>Constraints</h2>
+<ul>
+<li>Use LinkedIn only</li>
+</ul>`
+			);
 		});
 	});
 
 	describe('parsePostData', () => {
-		it('should parse post data correctly', async () => {
+		it('should parse post data correctly with metadata and content', async () => {
 			const content = `---
 date: 2024-10-01
 impressions: 1000

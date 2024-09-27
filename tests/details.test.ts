@@ -3,6 +3,7 @@ import { expect, test } from '@playwright/test';
 test.describe('Challenge Tracker App', () => {
 	test('details page displays correct post information', async ({ page }) => {
 		await page.goto('/details/challenge_sample');
+
 		await expect(page.locator('h1')).toHaveText('Post Details');
 
 		const firstRow = page.locator('tbody tr').first();

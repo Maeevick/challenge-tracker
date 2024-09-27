@@ -22,18 +22,18 @@
 				{formatDate(challenge.start)} - {formatDate(challenge.end)}
 			</p>
 			<span
-				class="mt-2 inline-block rounded-full px-2 py-1 text-xs font-semibold {challenge.isStarted &&
+				class="mt-2 inline-block rounded-full px-2 py-1 text-xs font-semibold {!challenge.isComing &&
 				!challenge.isFinished
 					? 'bg-green-200 text-green-800'
 					: challenge.isFinished
 						? 'bg-gray-200 text-gray-800'
 						: 'bg-blue-200 text-blue-800'}"
 			>
-				{challenge.isStarted && !challenge.isFinished
+				{!challenge.isComing && !challenge.isFinished
 					? $_('app.active')
 					: challenge.isFinished
 						? $_('app.completed')
-						: $_('app.futur')}
+						: $_('app.coming')}
 			</span>
 		</div>
 	</div>

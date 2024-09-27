@@ -19,10 +19,34 @@ describe('date', () => {
 	});
 
 	describe('calculateDaysPassed', () => {
-		it('should calculate days passed correctly', () => {
+		it('should calculate days passed correctly (on the same day)', () => {
+			const start = '2024-10-01';
+			const current = '2024-10-1';
+			expect(calculateDaysPassed(start, current)).toBe(1);
+		});
+
+		it('should calculate days passed correctly (in the same month)', () => {
 			const start = '2024-10-01';
 			const current = '2024-10-15';
-			expect(calculateDaysPassed(start, current)).toBe(14);
+			expect(calculateDaysPassed(start, current)).toBe(15);
+		});
+
+		it('should calculate days passed correctly (to the past)', () => {
+			const start = '2024-10-15';
+			const current = '2024-10-01';
+			expect(calculateDaysPassed(start, current)).toBe(15);
+		});
+
+		it('should calculate days passed correctly (across months)', () => {
+			const start = '2024-10-01';
+			const current = '2024-11-05';
+			expect(calculateDaysPassed(start, current)).toBe(36);
+		});
+
+		it('should calculate days passed correctly (across years)', () => {
+			const start = '2024-10-01';
+			const current = '2025-09-01';
+			expect(calculateDaysPassed(start, current)).toBe(336);
 		});
 	});
 });

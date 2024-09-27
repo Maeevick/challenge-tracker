@@ -1,4 +1,8 @@
 export function formatDate(dateString: string): string {
+	if (!dateString) {
+		return '';
+	}
+
 	return new Intl.DateTimeFormat('en', {
 		year: 'numeric',
 		month: 'short',
@@ -16,6 +20,6 @@ export function calculateDaysPassed(
 	current: string = new Date().toISOString()
 ): number {
 	return Math.ceil(
-		Math.abs(new Date(current).getTime() - new Date(start).getTime()) / (1000 * 60 * 60 * 24)
+		(Math.abs(new Date(current).getTime() - new Date(start).getTime()) + 1) / (1000 * 60 * 60 * 24)
 	);
 }
