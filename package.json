@@ -13,7 +13,8 @@
 		"format": "prettier --write .",
 		"test:integration": "playwright test",
 		"test:unit": "vitest run",
-		"ci":"npm run format && npm run lint && npm run check && npm run test:unit && npx playwright install --with-deps && npm run test:integration" 
+		"test:unit:watch": "vitest",
+		"ci": "npm run format && npm run lint && npm run check && npm run test:unit && npx playwright install --with-deps && npm run test:integration"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
@@ -22,6 +23,7 @@
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"@tailwindcss/typography": "^0.5.14",
 		"@types/eslint": "^9.6.0",
+		"@types/node": "^22.7.3",
 		"autoprefixer": "^10.4.20",
 		"eslint": "^9.0.0",
 		"eslint-config-prettier": "^9.1.0",
@@ -40,6 +42,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"marked": "^14.1.2"
+		"marked": "^14.1.2",
+		"svelte-i18n": "^4.0.0"
 	}
 }
