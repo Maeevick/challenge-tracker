@@ -12,7 +12,9 @@
 		class="overflow-hidden rounded-lg bg-white shadow-md transition-transform hover:scale-105 dark:bg-gray-800"
 	>
 		<img
-			src={challenge.thumbnail || placeholder}
+			src={challenge.thumbnail
+				? `/challenges/${challenge.slug}/${challenge.thumbnail}`
+				: placeholder}
 			alt={challenge.title}
 			class="m-4 h-48 w-full object-cover"
 		/>

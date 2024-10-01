@@ -2,6 +2,7 @@
 title: Workout Q4 2024
 start: 2024-10-01
 end: 2024-12-31
+thumbnail: workout.png
 ---
 
 ## Context

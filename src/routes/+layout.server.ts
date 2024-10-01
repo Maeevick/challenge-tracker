@@ -42,7 +42,7 @@ export const load: PageServerLoad = async () => {
 						end: rules.end,
 						isComing: new Date() < new Date(rules.start),
 						isFinished: new Date() > new Date(rules.end),
-						thumbnail: ''
+						thumbnail: rules.thumbnail || ''
 					};
 				})
 		);

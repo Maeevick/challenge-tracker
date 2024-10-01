@@ -25,4 +25,5 @@ export interface ChallengeRules {
 	start: string;
 	end: string;
 	content: string;
+	thumbnail?: string;
 }

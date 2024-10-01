@@ -23,6 +23,7 @@ export async function parseChallengeRules(content: string, slug: string): Promis
 		title: frontMatter.title,
 		start: frontMatter.start,
 		end: frontMatter.end,
+		thumbnail: frontMatter.thumbnail,
 		content: body
 	};
 }
