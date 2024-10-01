@@ -59,7 +59,7 @@
 	</div>
 </div>
 
-<div class="rounded-lg bg-white p-6 shadow-md dark:bg-gray-800">
+<div class="prose rounded-lg bg-white p-6 shadow-md dark:prose-invert dark:bg-gray-800">
 	<h2 class="mb-4 text-2xl font-semibold">{$_('challenge.rules')}</h2>
 	<p class="mb-2">
 		{formatDate(data.rules.start)} - {formatDate(data.rules.end)}

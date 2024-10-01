@@ -66,7 +66,6 @@ The description of the entry (in my case: a LinkedIn post).
 - Make stats more flexible to handle various types of challenges (dynamic from metadata).
 - Make advanced stats (group by tags, compute by objectives...).
 - Separate 'Completed' challenges from others in a second row / or with a toggle button.
-- Enhance UI Design and improve the mardown parsing to produce styled html for challenge description.
 - ...
 
 **Feel free to open issue for suggestions**
