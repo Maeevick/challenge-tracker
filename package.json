@@ -16,7 +16,7 @@
 		"test:integration:ui": "playwright test --ui",
 		"test:unit": "vitest run",
 		"test:unit:watch": "vitest",
-		"ci": "npm run format && npm run lint && npm run check && npm run test:unit && npx playwright install --with-deps && npm run test:integration"
+		"ci": "npm run format && npm run lint && npm run check && npm run test:unit && npm run test:integration"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
