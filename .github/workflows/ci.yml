@@ -34,7 +34,6 @@ jobs:
           key: ${{ runner.os }}-playwright-${{ hashFiles('package-lock.json') }}
       - name: Clean Install
         run: npm ci
-        if: steps.cache-npm.outputs.cache-hit != 'true'
       - name: May Install Playwright
         run: npx playwright install --with-deps
         if: steps.cache-playwright.outputs.cache-hit != 'true'
