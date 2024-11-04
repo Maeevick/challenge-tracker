@@ -40,6 +40,7 @@ export const load: PageServerLoad = async () => {
 						title: rules.title,
 						start: rules.start,
 						end: rules.end,
+						count: rules.count,
 						isComing: new Date() < new Date(rules.start),
 						isFinished: new Date() > new Date(rules.end),
 						thumbnail: rules.thumbnail || ''

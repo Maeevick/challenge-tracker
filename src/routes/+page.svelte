@@ -3,6 +3,9 @@
 	import ChallengeCard from '$lib/components/ChallengeCard.svelte';
 	import type { ChallengeInfo } from '$lib/types';
 
+	let withDESCStartDateSorter = (a: ChallengeInfo, b: ChallengeInfo) =>
+		new Date(b.start).getTime() - new Date(a.start).getTime();
+
 	export let data: { challenges: ChallengeInfo[] };
 </script>
 
@@ -10,7 +13,7 @@
 
 <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
 	{#if data.challenges && data.challenges.length > 0}
-		{#each data.challenges as challenge}
+		{#each data.challenges.sort(withDESCStartDateSorter) as challenge}
 			<ChallengeCard {challenge} />
 		{/each}
 	{:else}

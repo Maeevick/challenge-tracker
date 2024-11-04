@@ -26,7 +26,7 @@
 	}
 
 	$: totalStats = calculateTotalStats(data.posts);
-	$: totalDays = calculateDaysPassed(data.rules.start, data.rules.end);
+	$: totalDays = Number(data.rules.count) || calculateDaysPassed(data.rules.start, data.rules.end);
 	$: progress = (data.posts.length / totalDays) * 100;
 	$: averageEngagementRate = calculateEngagementRate(totalStats);
 	$: averageAcquisitionRate = calculateAcquisitionRate(totalStats);

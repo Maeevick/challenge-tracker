@@ -24,6 +24,7 @@ export interface ChallengeRules {
 	title: string;
 	start: string;
 	end: string;
+	count?: string;
 	content: string;
 	thumbnail?: string;
 }
