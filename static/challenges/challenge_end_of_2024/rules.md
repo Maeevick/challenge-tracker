@@ -2,12 +2,12 @@
 title: Challenge End of 2024
 start: 2024-11-04
 end: 2024-12-27
-count: 40
+count: 39
 ---
 
 ## Objectives
 
-- 1️⃣ Post daily on LinkedIn from Monday to Friday (8 weeks \* 5 days = 40 posts).
+- 1️⃣ Post daily on LinkedIn from Monday to Friday (8 weeks \* 5 days - 1 day (11/11) = 39 posts).
 - 2️⃣ Engage with my tech community (at least 3 insightful comments per day).
 - 3️⃣ Write the four articles:
   - "BDD, Example Mapping & Event Storming : définir le problème"
