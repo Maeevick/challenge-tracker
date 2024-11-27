@@ -38,7 +38,7 @@ export async function parsePostData(content: string): Promise<PostData> {
 		comments: parseInt(frontMatter.comments, 10),
 		shares: parseInt(frontMatter.shares, 10),
 		followers: parseInt(frontMatter.followers, 10),
-		tags: frontMatter.tags.split(',').map((tag) => tag.trim()),
+		tags: frontMatter.tags?.split(',').map((tag) => tag.trim()),
 		content: body
 	};
 }
