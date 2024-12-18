@@ -20,7 +20,7 @@
 		"ci": "npm run format && npm run lint && npm run check && npm run test:unit && npm run test:integration"
 	},
 	"dependencies": {
-		"marked": "^14.1.4",
+		"marked": "^15.0.4",
 		"svelte-i18n": "^4.0.1"
 	},
 	"devDependencies": {
