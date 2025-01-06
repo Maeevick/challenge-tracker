@@ -3,6 +3,8 @@
 	import { browser } from '$app/environment';
 	import { _, locale } from 'svelte-i18n';
 
+	let year = new Date().getFullYear();
+
 	let darkMode = false;
 
 	onMount(() => {
@@ -60,7 +62,7 @@
 
 	<footer class="mt-8 bg-white shadow-md dark:bg-gray-800">
 		<div class="container mx-auto px-4 py-4 text-center">
-			&copy; 2024 Challenge Tracker - Maeevick
+			&copy; {year} Challenge Tracker - Maeevick
 		</div>
 	</footer>
 </div>
