@@ -2,6 +2,7 @@
 title: Challenge Q1 2025
 start: 2025-01-06
 end: 2025-03-31
+aborted: true
 ---
 
 ## Objectives
