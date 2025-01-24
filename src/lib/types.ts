@@ -5,6 +5,7 @@ export interface ChallengeInfo {
 	end: string;
 	isComing: boolean;
 	isFinished: boolean;
+	isAborted: boolean;
 	thumbnail: string;
 }
 
@@ -25,6 +26,7 @@ export interface ChallengeRules {
 	start: string;
 	end: string;
 	count?: string;
+	aborted?: string;
 	content: string;
 	thumbnail?: string;
 }

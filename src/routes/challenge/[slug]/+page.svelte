@@ -30,6 +30,7 @@
 	$: progress = (data.posts.length / totalDays) * 100;
 	$: averageEngagementRate = calculateEngagementRate(totalStats);
 	$: averageAcquisitionRate = calculateAcquisitionRate(totalStats);
+	$: isAborted = Boolean(data.rules.aborted);
 </script>
 
 <h1 class="mb-4 text-3xl font-bold">{data.rules.title}</h1>
@@ -37,10 +38,15 @@
 <div class="mb-8 rounded-lg bg-white p-6 shadow-md dark:bg-gray-800">
 	<h2 class="mb-4 text-2xl font-semibold">{$_('challenge.progress')}</h2>
 	<div class="mb-2 flex justify-between">
-		<span>{data.posts.length} / {totalDays} {$_('challenge.days')}</span>
+		<span class={isAborted ? 'text-red-800' : ''}
+			>{data.posts.length} / {totalDays} {$_('challenge.days')}</span
+		>
 	</div>
 	<div class="mb-4 h-2.5 w-full rounded-full bg-gray-200 dark:bg-gray-700">
-		<div class="h-2.5 rounded-full bg-blue-600" style="width: {progress}%"></div>
+		<div
+			class="h-2.5 rounded-full {isAborted ? 'bg-red-600' : 'bg-blue-600'} "
+			style="width: {progress}%"
+		></div>
 	</div>
 	<div class="grid grid-cols-2 gap-4">
 		<div>

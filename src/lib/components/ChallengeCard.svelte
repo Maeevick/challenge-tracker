@@ -25,17 +25,22 @@
 			</p>
 			<span
 				class="mt-2 inline-block rounded-full px-2 py-1 text-xs font-semibold {!challenge.isComing &&
-				!challenge.isFinished
+				!challenge.isFinished &&
+				!challenge.isAborted
 					? 'bg-green-200 text-green-800'
 					: challenge.isFinished
 						? 'bg-gray-200 text-gray-800'
-						: 'bg-blue-200 text-blue-800'}"
+						: challenge.isAborted
+							? 'bg-red-200 text-red-800'
+							: 'bg-blue-200 text-blue-800'}"
 			>
-				{!challenge.isComing && !challenge.isFinished
+				{!challenge.isComing && !challenge.isFinished && !challenge.isAborted
 					? $_('app.active')
 					: challenge.isFinished
 						? $_('app.completed')
-						: $_('app.coming')}
+						: challenge.isAborted
+							? $_('app.aborted')
+							: $_('app.coming')}
 			</span>
 		</div>
 	</div>
